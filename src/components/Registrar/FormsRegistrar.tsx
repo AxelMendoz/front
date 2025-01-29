@@ -31,7 +31,7 @@ function FormsRegistrar() {
   };
 
   const validatePassword = (password: string) => {
-    return password.length >= 8 && /[0-9]/.test(password);
+    return password.length >= 5 && /[0-9]/.test(password);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,7 +53,7 @@ function FormsRegistrar() {
     }
 
     if (!validatePassword(formData.password)) {
-      setMessage('La contraseña debe tener al menos 8 caracteres, incluyendo un número.');
+      setMessage('La contraseña debe tener al menos 5 caracteres, incluyendo un número.');
       return;
     }
 

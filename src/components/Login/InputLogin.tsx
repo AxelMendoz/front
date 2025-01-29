@@ -4,6 +4,7 @@ import '../../Styles/Login.css';
 
 const InputLogin = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,15 +15,35 @@ const InputLogin = () => {
     }));
   };
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password: string) => {
+    return password.length >= 5 && /[0-9]/.test(password);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (formData.username && formData.password) {
-      alert('¡Inicio de sesión exitoso!');
-      navigate('/dashboard');
-    } else {
+    if (!formData.username || !formData.password) {
       alert('Por favor, ingresa tus credenciales.');
+      return;
     }
+
+    if (!validateEmail(formData.username)) {
+      setMessage('Por favor, ingresa un correo electrónico válido.');
+      return;
+    }
+
+    if (!validatePassword(formData.password)) {
+      setMessage('La contraseña debe tener al menos 5 caracteres, incluyendo un número.');
+      return;
+    }
+
+    alert('¡Inicio de sesión exitoso!');
+    navigate('/dashboard');
   };
 
   const handleRegister = () => {
@@ -53,6 +74,7 @@ const InputLogin = () => {
           />
           <button type="submit">Iniciar sesión</button>
         </form>
+        {message && <p className="errorMessage">{message}</p>}
         <p>
           ¿No tienes una cuenta?{' '}
           <span onClick={handleRegister} className="registerLink">
