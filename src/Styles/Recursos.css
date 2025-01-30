@@ -1,0 +1,126 @@
+.recursos-container {
+    display: flex;
+    background-color: #FFE9F1;
+    min-height: 100vh;
+    padding: 20px;
+    margin-left: 270px;
+}
+
+.recursos-content {
+    flex: 1;
+    padding: 30px;
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.recursos-content h1 {
+    color: #9D174D;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recursos-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta de cada recurso */
+.recurso-card {
+    width: 380px;
+    background-color: #FFDCE5;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recurso-card:hover {
+    transform: scale(1.03);
+}
+
+.recurso-card h2 {
+    color: #9D174D;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.recurso-card p {
+    font-size: 1rem;
+    color: #6e1423;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Lista de recursos asignados */
+.lista-recursos {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.lista-recursos li {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Colores para disponibilidad de recursos */
+.disponible {
+    color: #2D9C30;
+    background-color: rgba(45, 156, 48, 0.2);
+}
+
+.no-disponible {
+    color: #D7263D;
+    background-color: rgba(215, 38, 61, 0.2);
+}
+
+/* Estilos para los campos de entrada */
+.input-recurso, .select-recurso {
+    width: 90%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 2px solid #F472B6;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-recurso:focus, .select-recurso:focus {
+    border-color: #9D174D;
+}
+
+/* Botón para agregar recursos */
+.btn-agregar {
+    background-color: #F472B6;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-agregar:hover {
+    background-color: #9D174D;
+    transform: scale(1.05);
+}
