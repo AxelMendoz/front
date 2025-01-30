@@ -1,0 +1,101 @@
+.equiposContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFE9F1;
+    min-height: 100vh;
+    padding: 65px;
+    margin-left: 150px;
+    width: calc(100% - 95px);
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que los elementos se alineen a los extremos */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; 
+    margin-bottom: 20px;
+}
+
+/* Estilo del título */
+.title {
+    color: #9D174D;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo del botón de Nuevo Equipo */
+.newTeamButton {
+    background-color: #F472B6;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 6px 12px; 
+    width: auto;
+    max-width: 200px;  
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.newTeamButton:hover {
+    transform: scale(1.05);
+}
+
+.equiposGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Esto crea dos columnas */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+/* Tarjetas de equipos */
+.teamCard {
+    background-color: #F5E8EB;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 400px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.teamCard:hover {
+    transform: scale(1.05);
+}
+
+.teamCard h3 {
+    color: #9D174D;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.teamCard p {
+    color: #9D174D;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Estilo de los iconos */
+.teamCard svg {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #9D174D;
+}
+
+/* Contador de miembros */
+.members-count {
+    color: #9D174D;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
