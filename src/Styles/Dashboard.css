@@ -1,0 +1,124 @@
+.dashboard-container {
+    margin-left: 330px; /* Para no chocar con el sidebar */
+    padding: 20px;
+    background-color: #FFE9F1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Perfil */
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    background: none;
+    box-shadow: none;
+    position: relative;
+}
+
+/* Texto del perfil */
+.profile-info {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.profile-info h2 {
+    margin: 0;
+    color: #F472B6; /* Color original */
+    font-size: 1.5rem;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    color: #9D174D; /* Color original */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Ícono de usuario */
+.user-icon {
+    font-size: 2rem;
+    color: #020202;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    background: #F5E8EB;
+    background: rgba(245, 232, 235, 0.8);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #9D174D;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li:hover {
+    background: #E8D6DA;
+}
+
+.metrics {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.metric-card {
+    background-color: #F5E8EB;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.metric-card:hover {
+    transform: scale(1.05);
+}
+
+.metric-card h3 {
+    margin: 0;
+    color: #F472B6;
+}
+
+.metric-card p {
+    font-size: 1.5rem;
+    color: #ff1a75;
+    margin-top: 15px;
+}
+
+.chart-container {
+    background-color: #F5E8EB;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+}

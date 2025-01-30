@@ -1,0 +1,117 @@
+.proyectos-container {
+    display: flex;
+    background-color: #FFE9F1; /* Mismo fondo que el sidebar */
+    min-height: 100vh;
+    padding: 20px;
+    margin-left: 270px;
+}
+
+/* Contenedor de contenido */
+.proyectos-content {
+    flex: 1;
+    padding: 30px; /* Ajuste de padding */
+    max-width: 1400px; /* Aumenta el ancho máximo */
+    width: 90%; /* Hace que se ajuste mejor en pantallas grandes */
+    margin: auto;
+    margin-top: 20px; /* Mueve todo más arriba */
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.header h1 {
+    color: #9D174D;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+/* Botón de nuevo proyecto */
+.nuevo-proyecto-btn {
+    background-color: #F472B6;
+    color: #ffffff;
+    padding: 12px 14px; 
+    border: none;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    font-size: 1.2rem;
+    cursor: pointer;
+    height: 50px; 
+    width: fit-content; 
+    min-width: 150px; 
+    text-align: center;
+}
+
+.nuevo-proyecto-btn:hover {
+    background-color: #9D174D;
+}
+
+/* Tabla */
+.proyectos-table {
+    width: 100%;
+    max-width: 1800px; /* Aumenta el ancho máximo de la tabla */
+    border-collapse: collapse;
+    background-color: #FFDCE5;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.proyectos-table th, 
+.proyectos-table td {
+    padding: 18px;
+    text-align: left;
+    width: auto; /* Permite que las columnas se expandan automáticamente */
+}
+
+.proyectos-table th {
+    background-color: #F472B6;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.proyectos-table tr:nth-child(even) {
+    background-color: #FCE8EC;
+}
+
+.proyectos-table tr:hover {
+    background-color: #F5BBC9;
+}
+
+/* Status */
+.status {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.progreso {
+    color: #E6007E;
+}
+
+.planeando {
+    color: #9D174D;
+}
+
+/* Íconos de acciones */
+.icon {
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.icon.edit {
+    color: #F472B6;
+}
+
+.icon.delete {
+    color: #9D174D;
+}
