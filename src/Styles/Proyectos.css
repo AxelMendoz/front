@@ -1,22 +1,21 @@
 .proyectos-container {
     display: flex;
-    background-color: #FFE9F1; /* Mismo fondo que el sidebar */
+    background-color: #FFE9F1; 
     min-height: 100vh;
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 168px;
+    width: calc(100% - 40px); 
 }
 
-/* Contenedor de contenido */
 .proyectos-content {
     flex: 1;
-    padding: 30px; /* Ajuste de padding */
-    max-width: 1400px; /* Aumenta el ancho máximo */
-    width: 90%; /* Hace que se ajuste mejor en pantallas grandes */
+    padding: 30px; 
+    max-width: 95vw; 
+    width: 100%; 
     margin: auto;
-    margin-top: 20px; /* Mueve todo más arriba */
+    margin-top: 20px; 
 }
 
-/* Encabezado */
 .header {
     display: flex;
     justify-content: space-between; 
@@ -29,10 +28,9 @@
     color: #9D174D;
     font-size: 2.5rem;
     font-weight: bold;
-    margin: 0; /* Elimina cualquier margen adicional */
+    margin: 0; 
 }
 
-/* Botón de nuevo proyecto */
 .nuevo-proyecto-btn {
     background-color: #F472B6;
     color: #ffffff;
@@ -55,10 +53,9 @@
     background-color: #9D174D;
 }
 
-/* Tabla */
 .proyectos-table {
     width: 100%;
-    max-width: 1800px; /* Aumenta el ancho máximo de la tabla */
+    max-width: 98vw; 
     border-collapse: collapse;
     background-color: #FFDCE5;
     border-radius: 15px;
@@ -70,7 +67,7 @@
 .proyectos-table td {
     padding: 18px;
     text-align: left;
-    width: auto; /* Permite que las columnas se expandan automáticamente */
+    width: auto; 
 }
 
 .proyectos-table th {
@@ -101,7 +98,6 @@
     color: #9D174D;
 }
 
-/* Íconos de acciones */
 .icon {
     cursor: pointer;
     margin: 0 10px;
