@@ -10,6 +10,28 @@ const Sidebar = () => {
     navigate(path);
   };
 
+  const handleLogout = async () => {
+    try {
+      const token = localStorage.getItem('token');
+
+      if (token) {
+        await fetch('http://localhost:3000/auth/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          }
+        });
+      }
+
+      localStorage.removeItem('token');
+      sessionStorage.removeItem('token');
+      navigate('/');
+    } catch (error) {
+      console.error('Error al cerrar sesión:', error);
+    }
+  };
+
   return (
     <div className="sidebar">
       <h2 onClick={() => handleNavigation('/dashboard')} className="sidebar-header">
@@ -26,7 +48,7 @@ const Sidebar = () => {
           <FaToolbox className="icon" /> RECURSOS
         </li>
       </ul>
-      <div className="logout" onClick={() => handleNavigation('/cerrar-sesion')}>
+      <div className="logout" onClick={handleLogout}>
         <FaSignOutAlt className="icon" /> CERRAR SESIÓN
       </div>
     </div>
