@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffe9f1; /* Color del fondo */
+    background-color: #FFC6DA; /* Color del fondo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
   }
   
   h1 {
-    color: #ffa8c5; /* Color principal */
+    color: #9D174D; /* Color principal */
     margin-bottom: 20px;
   }
   
