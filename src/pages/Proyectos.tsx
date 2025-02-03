@@ -20,31 +20,33 @@ const Proyectos = () => {
             NUEVO PROYECTO <FaPlus />
           </button>
         </div>
-        <table className="proyectos-table">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Status</th>
-              <th>Start Date</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {proyectos.map((proyecto, index) => (
-              <tr key={index}>
-                <td>{proyecto.nombre}</td>
-                <td className={proyecto.status === 'En Progreso' ? 'status progreso' : 'status planeando'}>
-                  {proyecto.status}
-                </td>
-                <td>{proyecto.fecha}</td>
-                <td>
-                  <FaEdit className="icon edit" />
-                  <FaTrash className="icon delete" />
-                </td>
+        <div className="proyectos-table-container">
+          <table className="proyectos-table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Status</th>
+                <th>Start Date</th>
+                <th>Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {proyectos.map((proyecto, index) => (
+                <tr key={index}>
+                  <td>{proyecto.nombre}</td>
+                  <td className={proyecto.status === 'En Progreso' ? 'status progreso' : 'status planeando'}>
+                    {proyecto.status}
+                  </td>
+                  <td>{proyecto.fecha}</td>
+                  <td>
+                    <FaEdit className="icon edit" />
+                    <FaTrash className="icon delete" />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

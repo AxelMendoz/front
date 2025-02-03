@@ -7,7 +7,11 @@ const Equipos = () => {
   return (
     <div className="equiposContainer">
       <Sidebar />
-      <h1 className="title">EQUIPOS</h1>
+      
+      {/* Título */}
+      <div className="titleContainer">
+        <h1 className="title">EQUIPOS</h1>
+      </div>
 
       {/* Botón de Nuevo Equipo */}
       <button className="newTeamButton">
@@ -29,7 +33,6 @@ const Equipos = () => {
           <p className="members-count">2 miembros</p>
         </div>
 
-        {/* Nuevo equipo debajo del equipo 1 */}
         <div className="teamCard" id="equipo3">
           <h3>DESIGN TEAM</h3>
           <p>UX/UI</p>
@@ -37,7 +40,6 @@ const Equipos = () => {
           <p className="members-count">4 miembros</p>
         </div>
 
-        {/* Nuevo equipo debajo del equipo 2 */}
         <div className="teamCard" id="equipo4">
           <h3>DEVOPS TEAM</h3>
           <p>Infrastructure</p>

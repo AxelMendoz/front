@@ -1,126 +1,106 @@
+/* General container */
 .recursos-container {
     display: flex;
-    background-color: #FFE9F1;
+    background-color: #F4F4F9; /* Fondo más neutro */
     min-height: 100vh;
-    padding: 20px;
+    padding: 100px;
     margin-left: 270px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+    margin-right: 270px;
+    flex-direction: column; /* Para tener los elementos en una sola columna */
+    align-items: center; /* Centra todo el contenido */
 }
 
-.recursos-content {
-    flex: 1;
-    padding: 30px;
-    max-width: 1400px;
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-}
-
+/* Título */
 .recursos-content h1 {
-    color: #9D174D;
+    color: #5D3F6B; /* Color morado elegante */
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
     text-align: center;
 }
 
+/* Contenedor de tarjetas */
 .recursos-cards {
     display: flex;
-    gap: 20px;
+    gap: 40px; /* Aumentado el gap para separar más las tarjetas */
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
 }
 
-/* Tarjeta de cada recurso */
+/* Estilo de las tarjetas */
 .recurso-card {
     width: 380px;
-    background-color: #FFDCE5;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #F9F9F9; /* Fondo suave para las tarjetas */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.2s ease-in-out;
+    margin-bottom: 30px; /* Aumentado el margen inferior entre tarjetas */
 }
 
 .recurso-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
+/* Títulos de las tarjetas */
 .recurso-card h2 {
-    color: #9D174D;
+    color: #3C3C3C; /* Color gris oscuro */
     font-size: 1.6rem;
     margin-bottom: 10px;
 }
 
+/* Descripción de las tarjetas */
 .recurso-card p {
     font-size: 1rem;
-    color: #6e1423;
+    color: #555555; /* Gris neutro */
     margin: 5px 0;
-    font-weight: bold;
+    font-weight: normal;
 }
 
-/* Lista de recursos asignados */
-.lista-recursos {
-    text-align: left;
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    width: 100%;
-}
-
-.lista-recursos li {
-    font-size: 1rem;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Colores para disponibilidad de recursos */
-.disponible {
-    color: #2D9C30;
-    background-color: rgba(45, 156, 48, 0.2);
-}
-
-.no-disponible {
-    color: #D7263D;
-    background-color: rgba(215, 38, 61, 0.2);
-}
-
-/* Estilos para los campos de entrada */
+/* Campos de entrada */
 .input-recurso, .select-recurso {
     width: 90%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 10px;
-    border: 2px solid #F472B6;
+    border: 2px solid #D1C6E4; /* Borde suave */
     border-radius: 8px;
     font-size: 1rem;
     text-align: center;
     outline: none;
     transition: 0.3s;
+    background-color: #F9F9F9; /* Fondo suave para entradas */
 }
 
 .input-recurso:focus, .select-recurso:focus {
-    border-color: #9D174D;
+    border-color: #5D3F6B; /* Color al enfocar */
 }
 
-/* Botón para agregar recursos */
+/* Botón de agregar */
 .btn-agregar {
-    background-color: #F472B6;
+    background-color: #5D3F6B; /* Morado elegante */
     color: white;
-    padding: 10px 14px;
+    padding: 14px 18px;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
     transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px auto; /* Asegura que el botón se centre automáticamente */
+    width: auto; /* El ancho del botón se ajustará al contenido */
 }
 
 .btn-agregar:hover {
-    background-color: #9D174D;
+    background-color: #3C2F4A; /* Morado más oscuro al hacer hover */
     transform: scale(1.05);
 }

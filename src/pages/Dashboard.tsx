@@ -5,11 +5,13 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { FaUserCircle } from 'react-icons/fa';
 import '../Styles/Dashboard.css';
 
+// Registra los componentes de Chart.js necesarios
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  // Datos para el gráfico de la línea
   const data = {
     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
     datasets: [
@@ -25,16 +27,21 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
+      {/* Barra lateral */}
       <Sidebar />
+
       <div className="dashboard-content">
+        {/* Información del perfil */}
         <div className="profile-card">
           <div className="profile-info">
-            <h2>Nombre del Usuario</h2>
-            <p>Administrador</p>
+            
+            <h1>Administrador</h1>
           </div>
-          <div 
-            className="user-icon-container" 
-            onMouseEnter={() => setDropdownOpen(true)} 
+
+          {/* Icono de usuario y dropdown */}
+          <div
+            className="user-icon-container"
+            onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <FaUserCircle className="user-icon" />
@@ -50,6 +57,7 @@ const Dashboard = () => {
           </div>
         </div>
 
+        {/* Métricas */}
         <div className="metrics">
           <div className="metric-card">
             <h3>Proyectos Totales</h3>
@@ -65,6 +73,7 @@ const Dashboard = () => {
           </div>
         </div>
 
+        {/* Gráfico de proyectos realizados por mes */}
         <div className="chart-container">
           <h3>Proyectos Realizados por Mes</h3>
           <Line data={data} />

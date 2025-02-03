@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFE9F1;
+    background-color: #FFC6DA; /* Rosa de fondo */
     min-height: 100vh;
-    padding: 65px;
-    margin-left: 150px;
-    width: calc(100% - 95px);
+    padding: 0; /* Eliminar padding innecesario */
+    margin-left: 150px; /* Mantener espacio para la sidebar */
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    box-sizing: border-box;
+    margin-right: 450px;
 }
 
 .titleContainer {
@@ -15,87 +17,86 @@
     align-items: center;
     width: 100%;
     max-width: 900px; 
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Aumentar espacio debajo del título */
+    margin-top: 50px; /* Baja el título */
 }
 
 /* Estilo del título */
 .title {
     color: #9D174D;
-    font-size: 2rem;
+    font-size: 3rem; /* Tamaño de fuente más grande */
     font-weight: bold;
+    margin: 0;
 }
 
 /* Estilo del botón de Nuevo Equipo */
 .newTeamButton {
     background-color: #F472B6;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Ajustar tamaño de texto */
     font-weight: bold;
-    padding: 6px 12px; 
+    padding: 10px 20px; /* Añadir más espacio al botón */
     width: auto;
-    max-width: 200px;  
-    border-radius: 20px;
+    max-width: 250px; /* Limitar ancho máximo del botón */
+    border-radius: 25px;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
 
-
 .newTeamButton:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); /* Hacer el botón un poco más grande al pasar el ratón */
 }
 
 .equiposGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Esto crea dos columnas */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Crear columnas flexibles para una mejor visualización */
+    gap: 30px; /* Separación entre las tarjetas */
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
-  }
+}
 
-/* Tarjetas de equipos */
 .teamCard {
-    background-color: #F5E8EB;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
     text-align: center;
     flex: 1;
-    max-width: 400px;
+    max-width: 400px; /* Limitar tamaño máximo de las tarjetas */
     transition: transform 0.2s ease-in-out;
 }
 
 .teamCard:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto hover en las tarjetas */
 }
 
 .teamCard h3 {
     color: #9D174D;
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Hacer más grande el título */
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .teamCard p {
     color: #9D174D;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Ajustar tamaño de la descripción */
     font-weight: bold;
 }
 
-/* Estilo de los iconos */
 .teamCard svg {
-    font-size: 1.5rem;
-    margin-top: 5px;
+    font-size: 1.8rem; /* Aumentar el tamaño de los iconos */
+    margin-top: 10px;
     color: #9D174D;
 }
 
-/* Contador de miembros */
 .members-count {
     color: #9D174D;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 10px;
 }
